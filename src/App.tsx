@@ -1,7 +1,7 @@
 import { useState, useEffect, createRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { FileText, Eye, Presentation, Layers, Zap, Pin, Send, X } from 'lucide-react';
-import { supabase } from './lib/supabase';
+
 
 // Hero Section
 function Hero() {
