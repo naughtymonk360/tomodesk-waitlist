@@ -319,18 +319,7 @@ function Waitlist() {
 
     setStatus('loading');
 
-    const { error } = await supabase
-      .from('waitlist')
-      .insert([{ name, email }]);
-
-    if (error) {
-      if (error.code === '23505') {
-        setErrorMessage('This email is already on the waitlist.');
-      } else {
-        setErrorMessage('Something went wrong. Please try again.');
-      }
-      setStatus('error');
-    } else {
+    
 
   /* SEND EMAIL NOTIFICATION */
   await fetch(
@@ -359,7 +348,7 @@ function Waitlist() {
   setName('');
 
   setEmail('');
-}
+
   };
 
   return (
